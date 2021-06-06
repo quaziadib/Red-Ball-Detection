@@ -59,3 +59,4 @@ cv.destroyAllWindows()
 # Reference:
 # https://stackoverflow.com/questions/42840526/opencv-python-red-ball-detection-and-tracking
 # https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/
+# https://youtu.be/oXlwWbU8l2o
