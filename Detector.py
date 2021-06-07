@@ -15,7 +15,7 @@ red_lo_2 = (166, 159, 90)
 red_hi_2 = (180, 255, 255)
 
 
-capture = cv.VideoCapture(0) # used 'picture/Video.mp4' for testing
+capture = cv.VideoCapture(0) # Set path for recorded video
 
 while True:
     isTrue, frame = capture.read()
