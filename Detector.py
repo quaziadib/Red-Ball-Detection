@@ -29,8 +29,8 @@ while True:
     #mask_1 = cv.inRange(col_hsv, red_lo_1, red_hi_1)
     mask_2 = cv.inRange(col_hsv, red_lo_2, red_hi_2)
     #mask = cv.addWeighted(mask_2, 1.0, mask_1, 1.0, 0.0)
-    mask = cv.erode(mask_2,None, iterations=6)
-    mask = cv.dilate(mask_2, None, iterations=6)
+    mask_2 = cv.erode(mask_2,None, iterations=6)
+    mask_2 = cv.dilate(mask_2, None, iterations=6)
 
     contors = cv.findContours(mask_2, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     contors = imutils.grab_contours(contors)
