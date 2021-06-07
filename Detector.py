@@ -29,8 +29,8 @@ while True:
     #mask_1 = cv.inRange(col_hsv, red_lo_1, red_hi_1)
     mask_2 = cv.inRange(col_hsv, red_lo_2, red_hi_2)
     #mask = cv.addWeighted(mask_2, 1.0, mask_1, 1.0, 0.0)
-    mask_2 = cv.erode(mask_2,None, iterations=6)
-    mask_2 = cv.dilate(mask_2, None, iterations=6)
+    mask_2 = cv.erode(mask_2,(11,11), iterations=2)
+    mask_2 = cv.dilate(mask_2, (11,11), iterations=2)
 
     contors = cv.findContours(mask_2, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     contors = imutils.grab_contours(contors)
@@ -56,6 +56,12 @@ while True:
 
 capture.release()
 cv.destroyAllWindows()
+
+
+# Reference:
+# https://stackoverflow.com/questions/42840526/opencv-python-red-ball-detection-and-tracking
+# https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/
+# https://youtu.be/oXlwWbU8l2o
 
 
 # Reference:
